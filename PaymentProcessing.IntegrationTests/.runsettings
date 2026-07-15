@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RunSettings>
+  <RunConfiguration>
+    <EnvironmentVariables>
+      <API_URL>https://localhost:7074</API_URL>
+      <DATABASE_CONNECTION>Host=localhost;Port=5432;Database=PaymentProcessing;Username=postgres;Password=postgres</DATABASE_CONNECTION>
+    </EnvironmentVariables>
+  </RunConfiguration>
+</RunSettings>

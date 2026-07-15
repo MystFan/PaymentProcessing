@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="PaymentProcessing.Application/PaymentProcessing.Application.csproj" Id="a6e7c1e4-e53b-401a-b013-58239a734a87" />
+  <Project Path="PaymentProcessing.DataAccess/PaymentProcessing.DataAccess.csproj" Id="e0527029-5645-4625-a991-c4daddeef376" />
+  <Project Path="PaymentProcessing.Domain/PaymentProcessing.Domain.csproj" Id="30d0a6ce-223c-4643-b7df-321e3da9ac4d" />
+  <Project Path="PaymentProcessing.IntegrationTests/PaymentProcessing.IntegrationTests.csproj" Id="eab9cb7c-6713-4d7e-bea8-93ba356b5b24" />
+  <Project Path="PaymentProcessing.Web/PaymentProcessing.Web.csproj" Id="e59cd856-ce2d-48ee-871d-9add4d7467e3" />
+</Solution>
