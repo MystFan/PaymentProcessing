@@ -103,7 +103,7 @@ This document summarizes the architecture of the PaymentProcessing solution. It 
 
 ```mermaid
 flowchart LR
-  Client[Client (API Consumer)] -->|HTTP| Web[PaymentProcessing.Web\n(Minimal API)]
+  Client[Client API Consumer] -->|HTTP| Web[PaymentProcessing.Web\n(Minimal API)]
   Web -->|IMediator.Send()| Mediator[MediatR]
   Mediator --> Application[Application Layer\n(Commands / Queries / Handlers)]
   Application --> Domain[Domain Layer\n(Entities & Business Logic)]
