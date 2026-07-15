@@ -103,14 +103,14 @@ This document summarizes the architecture of the PaymentProcessing solution. It 
 
 ```mermaid
 flowchart LR
-  Client[Client API Consumer] -->|HTTP| Web[PaymentProcessing.Web\n(Minimal API)]
-  Web -->|IMediator.Send()| Mediator[MediatR]
-  Mediator --> Application[Application Layer\n(Commands / Queries / Handlers)]
-  Application --> Domain[Domain Layer\n(Entities & Business Logic)]
-  Application --> Repo[Repository<T> (IRepository)]
-  Repo --> EF[EFContext (DbContext)]
-  EF -->|Npgsql| Postgres[(PostgreSQL)]
-  Web -->|Swagger UI| Dev[Developer / DevTools]
+  Client["Client API Consumer"] -->|HTTP| Web["PaymentProcessing.Web<br/>(Minimal API)"]
+  Web -->|IMediator.Send()| Mediator["MediatR"]
+  Mediator --> Application["Application Layer<br/>(Commands / Queries / Handlers)"]
+  Application --> Domain["Domain Layer<br/>(Entities & Business Logic)"]
+  Application --> Repo["Repository&lt;T&gt; (IRepository)"]
+  Repo --> EF["EFContext (DbContext)"]
+  EF -->|Npgsql| Postgres[("PostgreSQL")]
+  Web -->|Swagger UI| Dev["Developer / DevTools"]
 ```
 
 ### Sequence diagram: Transfer flow
