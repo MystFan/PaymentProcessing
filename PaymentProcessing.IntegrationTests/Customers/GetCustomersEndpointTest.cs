@@ -9,7 +9,6 @@ namespace PaymentProcessing.IntegrationTests.Customers
         public async Task ShouldGetAllCustomers()
         {
             var database = new DatabaseHelper(Context);
-            var dbCustomers = await database.CustomersAsync();
 
             var customersResponse = await Request.GetAsync("/customers");
 
@@ -39,6 +38,8 @@ namespace PaymentProcessing.IntegrationTests.Customers
 
                 customers.Add(customer);
             }
+
+            var dbCustomers = await database.CustomersAsync();
 
             customers = customers.OrderBy(c => c.Id).ToList();
 

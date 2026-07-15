@@ -1,6 +1,6 @@
 ﻿namespace PaymentProcessing.IntegrationTests.ResponseModels
 {
-    internal class CustomerResponse
+    public record CustomerResponse
     {
         public long Id { get; set; }
 

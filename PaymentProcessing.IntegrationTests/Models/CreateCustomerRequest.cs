@@ -1,6 +1,6 @@
 ﻿namespace PaymentProcessing.IntegrationTests.ResponseModels
 {
-    internal class CreateCustomerRequest
+    public record CreateCustomerRequest
     {
         public string Name { get; set; } = null!;
 

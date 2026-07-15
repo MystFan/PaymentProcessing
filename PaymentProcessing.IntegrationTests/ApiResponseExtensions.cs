@@ -17,6 +17,25 @@ namespace PaymentProcessing.IntegrationTests
                 errorMessage = name.GetString();
             }
 
+            if (errorsElement?.TryGetProperty("extensions", out var extensions) == true
+                && extensions.TryGetProperty("message", out var message))
+            {
+                errorMessage = message.GetString();
+            }
+
+            return errorMessage;
+        }
+
+        public static async Task<string?> GetErrorMessageAsync(this IAPIResponse response)
+        {
+            var errorsElement = await response.JsonAsync();
+
+            string? errorMessage = null;
+            if (errorsElement?.TryGetProperty("message", out var message) == true)
+            {
+                errorMessage = message.GetString();
+            }
+
             return errorMessage;
         }
 

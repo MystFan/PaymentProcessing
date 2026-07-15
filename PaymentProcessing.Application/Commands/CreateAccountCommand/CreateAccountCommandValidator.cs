@@ -1,8 +1,5 @@
 ﻿using FluentValidation;
-using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Text;
 
 namespace PaymentProcessing.Application.Commands.CreateAccountCommand
 {
@@ -16,13 +13,14 @@ namespace PaymentProcessing.Application.Commands.CreateAccountCommand
 
         public CreateAccountCommandValidator()
         {
-            RuleFor(x => x.CustomerId).GreaterThan(0);
+            RuleFor(x => x.CustomerId)
+                .GreaterThan(0)
+                .WithMessage("Invalid customer id.");
 
             RuleFor(x => x.Balance).GreaterThanOrEqualTo(0);
 
             RuleFor(x => x.Currency)
-                .NotEmpty()
-                .Must(code => ValidCurrencyCodes.Contains(code))
+                .Must(code => code != null && ValidCurrencyCodes.Contains(code))
                 .WithMessage("Currency must be a valid currency code.");
         }
     }

@@ -55,7 +55,7 @@ internal sealed class ExceptionHandlerMiddleware
             Extensions =
             {
                 {
-                    "message", exception.ToString()
+                    "message", exception.Message != null ? exception.Message : exception.ToString()
                 }
             }
         };
